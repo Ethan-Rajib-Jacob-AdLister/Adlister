@@ -44,6 +44,8 @@
 
 CREATE DATABASE IF NOT EXISTS games4sale_db;
 
+USE games4sale_db;
+
 CREATE TABLE users (
                        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
                        username VARCHAR(240) NOT NULL,
