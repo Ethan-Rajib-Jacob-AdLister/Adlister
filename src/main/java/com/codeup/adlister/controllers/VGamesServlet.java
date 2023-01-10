@@ -15,7 +15,6 @@ import java.io.IOException;
 @WebServlet(name = "controllers.VGamesServlet", urlPatterns = "/ads/vgames")
 public class VGamesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("We're in the Get method!");
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
@@ -25,9 +24,7 @@ public class VGamesServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("We're in the Post method!");
         User user = (User) request.getSession().getAttribute("user");
-        System.out.printf("Servlet shows %s", request.getParameter("con"));
         VGames vg = new VGames(
                 user.getId(),
                 request.getParameter("title"),
