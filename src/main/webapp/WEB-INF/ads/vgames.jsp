@@ -15,8 +15,8 @@
             <tr><label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text"></tr>
             <th></th>
-            <tr><label for="console">Console</label>
-                <input id="console" class="form-control" type="text" placeholder="Console Name"></tr>
+            <tr><label for="con">Console</label>
+                <input id="con" class="form-control" type="text" placeholder="Console Name"></tr>
             <th></th>
             <tr><label for="genre">Genre</label>
                 <input id="genre" class="form-control" type="text" placeholder="Genre Name"></tr>

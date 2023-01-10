@@ -67,12 +67,12 @@ CREATE TABLE users (
 CREATE TABLE game_store (
                        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
                        user_id INT UNSIGNED NOT NULL,
-                       title VARCHAR(240) NOT NULL,
-                       console VARCHAR(50) NOT NULL,
-                       genre VARCHAR(50) NOT NULL,
-                       type VARCHAR(50) NOT NULL,
-                       cond VARCHAR(50),
-                       price VARCHAR(15) NOT NULL,
+                       title VARCHAR(240) NOT NULL DEFAULT 'NoTitle',
+                       console VARCHAR(50) NOT NULL DEFAULT 'NoConsole',
+                       genre VARCHAR(50) NOT NULL DEFAULT 'NoGenre',
+                       type VARCHAR(50) NOT NULL DEFAULT 'NoType',
+                       cond VARCHAR(50) DEFAULT 'NoCond',
+                       price VARCHAR(15) NOT NULL DEFAULT 'NoPrice',
                        description TEXT NOT NULL,
                        PRIMARY KEY (id)
 #                        FOREIGN KEY (user_id) REFERENCES users(id)

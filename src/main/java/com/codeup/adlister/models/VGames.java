@@ -14,6 +14,7 @@ public class VGames {
     private String price;
 
     public VGames(long userId, String title, String console, String genre, String type, String condition, String price, String description) {
+        System.out.printf("Constructor shows %s",console);
         this.setUserId(userId);
         this.setTitle(title);
         this.setConsole(console);
