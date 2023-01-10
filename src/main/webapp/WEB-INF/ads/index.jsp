@@ -3,7 +3,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
+        <jsp:param name="title" value="Create a new Vgame" />
     </jsp:include>
 </head>
 <body>
@@ -19,6 +19,7 @@
         </div>
     </c:forEach>
 </div>
+
 
 </body>
 </html>
