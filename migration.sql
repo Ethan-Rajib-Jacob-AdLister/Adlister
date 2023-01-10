@@ -54,10 +54,25 @@ CREATE TABLE users (
                        PRIMARY KEY (id)
 );
 
+# CREATE TABLE game_store (
+#                        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+#                        user_id INT UNSIGNED NOT NULL,
+#                        title VARCHAR(240) NOT NULL,
+#                        description TEXT NOT NULL,
+#                        PRIMARY KEY (id),
+#                        FOREIGN KEY (user_id) REFERENCES users(id)
+#                            ON DELETE CASCADE
+# );
+
 CREATE TABLE game_store (
                        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
                        user_id INT UNSIGNED NOT NULL,
                        title VARCHAR(240) NOT NULL,
+                       console VARCHAR(50) NOT NULL,
+                       genre VARCHAR(50) NOT NULL,
+                       type VARCHAR(50) NOT NULL,
+                       cond VARCHAR(50),
+                       price INT(15) NOT NULL,
                        description TEXT NOT NULL,
                        PRIMARY KEY (id),
                        FOREIGN KEY (user_id) REFERENCES users(id)

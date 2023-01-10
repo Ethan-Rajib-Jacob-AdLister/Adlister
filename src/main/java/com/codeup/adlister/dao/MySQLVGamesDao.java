@@ -59,6 +59,11 @@ public class MySQLVGamesDao implements Vgs{
                 rs.getLong("id"),
                 rs.getLong("user_id"),
                 rs.getString("title"),
+                rs.getString("console"),
+                rs.getString("genre"),
+                rs.getString("type"),
+                rs.getString("cond"),
+                rs.getInt("price"),
                 rs.getString("description")
         );
     }
