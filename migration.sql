@@ -72,7 +72,7 @@ CREATE TABLE game_store (
                        genre VARCHAR(50) NOT NULL,
                        type VARCHAR(50) NOT NULL,
                        cond VARCHAR(50),
-                       price INT(15) NOT NULL,
+                       price VARCHAR(15) NOT NULL,
                        description TEXT NOT NULL,
                        PRIMARY KEY (id)
 #                        FOREIGN KEY (user_id) REFERENCES users(id)

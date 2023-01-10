@@ -11,9 +11,9 @@ public class VGames {
     private String genre;
     private String type;
     private String condition;
-    private int price;
+    private String price;
 
-    public VGames(long id, long userId, String title, String console, String genre, String type, String condition, int price, String description) {
+    public VGames(long userId, String title, String console, String genre, String type, String condition, String price, String description) {
         this.setUserId(userId);
         this.setTitle(title);
         this.setConsole(console);
@@ -24,10 +24,15 @@ public class VGames {
         this.setDescription(description);
     }
 
-    public VGames(long id, long userId, String title, String description) {
+    public VGames(long id, long userId, String title, String console, String genre, String type, String condition, String price, String description) {
         this.setId(id);
         this.setUserId(userId);
         this.setTitle(title);
+        this.setConsole(console);
+        this.setGenre(genre);
+        this.setType(type);
+        this.setCondition(condition);
+        this.setPrice(price);
         this.setDescription(description);
     }
 
@@ -101,11 +106,11 @@ public class VGames {
         this.condition = condition;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }
