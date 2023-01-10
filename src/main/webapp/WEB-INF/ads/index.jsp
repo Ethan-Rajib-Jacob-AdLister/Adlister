@@ -12,10 +12,15 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
-    <c:forEach var="ad" items="${ads}">
+    <c:forEach var="game" items="${vgames}">
         <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+            <h2>Title: ${game.title}</h2>
+            <p>Console: ${game.console}</p>
+            <p>Genre: ${game.genre}</p>
+            <p>Desc: ${game.description}</p>
+            <p>Condition: ${game.condition}</p>
+            <p>Type: ${game.type}</p>
+            <p>Price: ${game.price}</p>
         </div>
     </c:forEach>
 </div>
