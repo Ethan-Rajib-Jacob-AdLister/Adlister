@@ -15,9 +15,6 @@
             <tr><label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text"></tr>
             <th></th>
-<%--            <tr><label for="description">Description</label>--%>
-<%--                <textarea id="description" name="description" class="form-control" type="text"></textarea></tr>--%>
-<%--            <th></th>--%>
             <tr><label for="console">Console</label>
                 <input id="console" class="form-control" type="text" placeholder="Console Name"></tr>
             <th></th>
@@ -33,7 +30,11 @@
             <tr><label for="price">Price</label>
                 <input id="price" class="form-control" type="text" placeholder="$0.00"></tr>
             <th></th>
+            <tr><label for="description">Description</label>
+                <textarea id="description" name="description" class="form-control" type="text"></textarea></tr>
+            <th></th>
         </table>
+        <input type="submit">
     </form>
 </div>
 </body>
