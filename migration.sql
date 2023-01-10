@@ -74,9 +74,9 @@ CREATE TABLE game_store (
                        cond VARCHAR(50),
                        price INT(15) NOT NULL,
                        description TEXT NOT NULL,
-                       PRIMARY KEY (id),
-                       FOREIGN KEY (user_id) REFERENCES users(id)
-                           ON DELETE CASCADE
+                       PRIMARY KEY (id)
+#                        FOREIGN KEY (user_id) REFERENCES users(id)
+#                            ON DELETE CASCADE
 );
 
 CREATE TABLE ads (
