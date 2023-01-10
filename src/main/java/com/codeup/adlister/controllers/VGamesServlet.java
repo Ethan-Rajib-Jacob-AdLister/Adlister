@@ -1,7 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.models.Ad;
+//import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.models.VGames;
 
@@ -28,6 +28,11 @@ public class VGamesServlet extends HttpServlet {
         VGames vg = new VGames(
                 user.getId(),
                 request.getParameter("title"),
+                request.getParameter("con"),
+                request.getParameter("genre"),
+                request.getParameter("type"),
+                request.getParameter("condition"),
+                request.getParameter("price"),
                 request.getParameter("description")
         );
         DaoFactory.getVgsDao().insert(vg);

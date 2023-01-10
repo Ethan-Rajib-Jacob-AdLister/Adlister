@@ -41,7 +41,7 @@
 # here is the new db that the project talks to.
 
 
-
+DROP DATABASE  IF EXISTS games4sale_db;
 CREATE DATABASE IF NOT EXISTS games4sale_db;
 
 USE games4sale_db;
@@ -54,14 +54,29 @@ CREATE TABLE users (
                        PRIMARY KEY (id)
 );
 
+# CREATE TABLE game_store (
+#                        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+#                        user_id INT UNSIGNED NOT NULL,
+#                        title VARCHAR(240) NOT NULL,
+#                        description TEXT NOT NULL,
+#                        PRIMARY KEY (id),
+#                        FOREIGN KEY (user_id) REFERENCES users(id)
+#                            ON DELETE CASCADE
+# );
+
 CREATE TABLE game_store (
                        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
                        user_id INT UNSIGNED NOT NULL,
-                       title VARCHAR(240) NOT NULL,
+                       title VARCHAR(240) NOT NULL DEFAULT 'NoTitle',
+                       console VARCHAR(50) NOT NULL DEFAULT 'NoConsole',
+                       genre VARCHAR(50) NOT NULL DEFAULT 'NoGenre',
+                       type VARCHAR(50) NOT NULL DEFAULT 'NoType',
+                       cond VARCHAR(50) DEFAULT 'NoCond',
+                       price VARCHAR(15) NOT NULL DEFAULT 'NoPrice',
                        description TEXT NOT NULL,
-                       PRIMARY KEY (id),
-                       FOREIGN KEY (user_id) REFERENCES users(id)
-                           ON DELETE CASCADE
+                       PRIMARY KEY (id)
+#                        FOREIGN KEY (user_id) REFERENCES users(id)
+#                            ON DELETE CASCADE
 );
 
 CREATE TABLE ads (

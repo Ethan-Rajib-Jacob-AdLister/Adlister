@@ -1,7 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.Config;
-import com.codeup.adlister.models.Ad;
+//import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.VGames;
 import com.mysql.cj.jdbc.Driver;
 
@@ -40,11 +40,16 @@ public class MySQLVGamesDao implements Vgs{
     @Override
     public Long insert(VGames vGames) {
         try {
-            String insertQuery = "INSERT INTO game_store(user_id, title, description) VALUES (?, ?, ?)";
+            String insertQuery = "INSERT INTO game_store(user_id, title, console, genre, type, cond, price, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, vGames.getUserId());
             stmt.setString(2, vGames.getTitle());
-            stmt.setString(3, vGames.getDescription());
+            stmt.setString(3, vGames.getConsole());
+            stmt.setString(4, vGames.getGenre());
+            stmt.setString(5, vGames.getType());
+            stmt.setString(6, vGames.getCondition());
+            stmt.setString(7, vGames.getPrice());
+            stmt.setString(8, vGames.getDescription());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -59,6 +64,11 @@ public class MySQLVGamesDao implements Vgs{
                 rs.getLong("id"),
                 rs.getLong("user_id"),
                 rs.getString("title"),
+                rs.getString("console"),
+                rs.getString("genre"),
+                rs.getString("type"),
+                rs.getString("cond"),
+                rs.getString("price"),
                 rs.getString("description")
         );
     }

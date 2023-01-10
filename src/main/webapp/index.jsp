@@ -10,6 +10,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Welcome to the Video Game DB!</h1>
+        <p>This is an ad-lister project utilizing JSP and MYSQL to host the trade or sale of home use Video Game cartridges.</p>
     </div>
 </body>
 </html>

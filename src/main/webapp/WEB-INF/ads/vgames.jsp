@@ -15,20 +15,20 @@
             <tr><label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text"></tr>
             <th></th>
-            <tr><label for="console">Console</label>
-                <input id="console" class="form-control" type="text" placeholder="Console Name"></tr>
+            <tr><label for="con">Console</label>
+                <input id="con" name="con" class="form-control" type="text" placeholder="Console Name"></tr>
             <th></th>
             <tr><label for="genre">Genre</label>
-                <input id="genre" class="form-control" type="text" placeholder="Genre Name"></tr>
+                <input id="genre" name="genre" class="form-control" type="text" placeholder="Genre Name"></tr>
             <th></th>
             <tr><label for="type">Game Type</label>
-                <input id="type" class="form-control" type="text" placeholder="CD / Cartridge"></tr>
+                <input id="type" name="type" class="form-control" type="text" placeholder="CD / Cartridge"></tr>
             <th></th>
             <tr><label for="condition">Condition</label>
-                <input id="condition" class="form-control" type="text" placeholder="Brand New / Great / Good"></tr>
+                <input id="condition" name="condition" class="form-control" type="text" placeholder="Brand New / Great / Good"></tr>
             <th></th>
             <tr><label for="price">Price</label>
-                <input id="price" class="form-control" type="text" placeholder="$0.00"></tr>
+                <input id="price" name="price" class="form-control" type="text" placeholder="$0.00"></tr>
             <th></th>
             <tr><label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea></tr>
