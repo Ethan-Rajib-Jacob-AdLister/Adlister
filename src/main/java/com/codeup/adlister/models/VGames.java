@@ -13,8 +13,6 @@ public class VGames {
     private String condition;
     private int price;
 
-
-
     public VGames(long id, long userId, String title, String description) {
         this.setId(id);
         this.setUserId(userId);

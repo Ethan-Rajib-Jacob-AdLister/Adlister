@@ -41,7 +41,7 @@
 # here is the new db that the project talks to.
 
 
-
+DROP DATABASE  IF EXISTS games4sale_db;
 CREATE DATABASE IF NOT EXISTS games4sale_db;
 
 USE games4sale_db;
