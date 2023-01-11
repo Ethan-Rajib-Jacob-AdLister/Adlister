@@ -12,6 +12,16 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
+    <div>
+        <form method="POST" action="/search">
+            <div class="form-group d-flex">
+                <input id="title" name="query" class="form-control mr-1" type="text">&nbsp;
+                <input type="submit" class="btn btn-primary" value="Search">
+            </div>
+
+        </form>
+    </div>
+
     <c:forEach var="game" items="${vgames}">
         <div class="col-md-6">
             <h2>Title: ${game.title}</h2>
