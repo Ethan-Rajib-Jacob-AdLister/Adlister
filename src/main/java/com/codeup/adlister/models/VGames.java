@@ -13,6 +13,12 @@ public class VGames {
     private String condition;
     private String price;
 
+
+
+    public VGames() {
+
+    }
+
     public VGames(long userId, String title, String console, String genre, String type, String condition, String price, String description) {
         this.setUserId(userId);
         this.setTitle(title);
