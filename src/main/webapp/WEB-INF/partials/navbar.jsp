@@ -15,6 +15,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <c:choose>
+            
                 <c:when test="${sessionScope.userLoggedIn}">
                     <li><a href="/profile">Profile</a></li>
                     <li><a href="/logout">Logout</a></li>

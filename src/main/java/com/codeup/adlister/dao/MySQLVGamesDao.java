@@ -103,7 +103,7 @@ public class MySQLVGamesDao implements Vgs {
 //        return createVGamesFromResults(rs);
         return false;
     }
-
+    
     public List<VGames> searchVGames(String title) throws SQLException {
         String sql = "SELECT * FROM game_store WHERE title LIKE ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
