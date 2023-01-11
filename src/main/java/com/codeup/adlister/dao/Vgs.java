@@ -10,5 +10,6 @@ public interface Vgs {
     List<VGames> all();
     // insert a new ad and return the new ad's id
     List<VGames> searchVGames(String title) throws Exception;
+    boolean deleteVGames(int id) throws Exception;
     Long insert(VGames vGames);
 }

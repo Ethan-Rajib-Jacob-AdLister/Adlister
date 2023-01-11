@@ -7,11 +7,15 @@
 <%--        </div>--%>
         <ul class="nav navbar-nav">
             <li><a href="/vgames">View listings</a></li>
-            <li><a href="/ads/vgames">Sell a Game!</a></li>
+            <c:choose>
+                <c:when test="${sessionScope.userLoggedIn}">
+                    <li><a href="/ads/vgames">Sell a Game!</a></li>
+                </c:when>
+            </c:choose>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <c:choose>
-                <c:when test="${sessionScope.user}">
+                <c:when test="${sessionScope.userLoggedIn}">
                     <li><a href="/profile">Profile</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </c:when>

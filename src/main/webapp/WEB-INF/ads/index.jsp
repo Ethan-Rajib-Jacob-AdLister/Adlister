@@ -31,7 +31,7 @@
     <div class="four-column-summary">
         <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
-                <img src="../../images/v-o-i-d.jpg"> alt="cd case">
+                <img src="../../images/v-o-i-d.jpg" alt="cd case">
                 <div class="caption">
                     <h3>Title: ${game.title}</h3>
                     <ul class="list-group">
@@ -42,7 +42,15 @@
                         <li class="list-group-item">Type: ${game.type}</li>
                         <li class="list-group-item">Price: ${game.price}</li>
                     </ul>
-                    <p><a href="#" class="btn btn-primary" role="button">Edit</a> <a href="#" class="btn btn-default" role="button">Delete</a></p>
+<%--                        Buttons at bottom | Edit & Delete --%>
+                    <form method="POST" action="ads/delete">
+                        <input style="display:none" id="gameID" name="gameID" class="form-control mr-1" type="text" value="${game.id}">
+                        <input type="submit" value="DELETE">
+                    </form>
+                    <form method="POST" action="ads/">
+                        <input style="display:none" id="gameID2" name="gameID2" class="form-control mr-1" type="text" value="${game.id}">
+                        <input type="submit" value="EDIT">
+                    </form>
                 </div>
         </div>
     </div>
