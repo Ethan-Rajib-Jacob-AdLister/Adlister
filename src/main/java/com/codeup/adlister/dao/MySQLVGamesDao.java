@@ -14,12 +14,7 @@ public class MySQLVGamesDao implements Vgs {
     private Connection connection = null;
     private String query;
 
-
     public static Connection con;
-
-
-
-
 
     public MySQLVGamesDao(Config config) {
         try {
@@ -95,58 +90,6 @@ public class MySQLVGamesDao implements Vgs {
         return vgames;
     }
 
-    //get single item
-
-    public VGames getSingleGame(int id) {
-        VGames sg = null;
-        try {
-            String query = "SELECT * FROM game_store WHERE id=?";
-            PreparedStatement pt = this.connection.prepareStatement(query);
-            pt.setInt(1, id);
-            ResultSet rs = pt.executeQuery();
-
-            while (rs.next()) {
-                long singleG1 = rs.getLong("id");
-                long singleG2 = rs.getLong("user_id");
-                String singleG3 = rs.getString("title");
-                String singleG4 = rs.getString("console");
-                String singleG5 = rs.getString("genre");
-                String singleG6 = rs.getString("type");
-                String singleG7 = rs.getString("cond");
-                String singleG8 = rs.getString("price");
-                String singleG9 = rs.getString("description");
-
-                sg = new VGames(singleG1, singleG2, singleG3, singleG4, singleG5, singleG6, singleG7, singleG8, singleG9);
-
-
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-
-        return sg;
-
-    }
-
-
-    public MySQLVGamesDao getCon (Config config) {
-        try {
-            DriverManager.registerDriver(new Driver());
-            connection = DriverManager.getConnection(
-                    config.getUrl(),
-                    config.getUser(),
-                    config.getPassword()
-            );
-        } catch (SQLException e) {
-            throw new RuntimeException("Error connecting to the database!", e);
-        }
-        return null;
-    }
-
-
-
-
 // delete
 
     public void deleteGame (int id) {
@@ -163,7 +106,7 @@ public class MySQLVGamesDao implements Vgs {
         }
 
     }
-
+    
     public List<VGames> searchVGames(String title) throws SQLException {
         String sql = "SELECT * FROM game_store WHERE title LIKE ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
