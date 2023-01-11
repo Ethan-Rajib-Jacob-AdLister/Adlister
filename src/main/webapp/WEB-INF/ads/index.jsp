@@ -2,7 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.codeup.adlister.dao.MySQLVGamesDao" %>
-<%@ page import="com.codeup.adlister.dao.ListVGamesDao" %>
+<%--<%@ page import="com.codeup.adlister.dao.ListVGamesDao" %>--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
