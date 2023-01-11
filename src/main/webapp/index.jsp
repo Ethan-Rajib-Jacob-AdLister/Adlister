@@ -4,10 +4,11 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
+        <jsp:param name="title" value="Video Game Trader" />
     </jsp:include>
 </head>
 <body>
+    <c:set var = "userLoggedIn" scope = "session" value="${false}" />
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container centered"><h1>Welcome to the Video Game DB!</h1>
         <p class="centered">This is an ad-lister project utilizing JSP and MYSQL to host the trade or sale of home use Video Game cartridges.</p>

@@ -92,19 +92,16 @@ public class MySQLVGamesDao implements Vgs {
 
 // delete
 
-    public void deleteGame (int id) {
-        VGames sg = null;
-        try {
-            String query = "DELETE * FROM game_store WHERE id=?";
-            PreparedStatement pt = this.connection.prepareStatement(query);
-            pt.setInt(1, id);
-            pt.execute();
+    public boolean deleteVGames(int id2) throws SQLException {
+        String sql = "DELETE FROM game_store WHERE id = " + id2 + ";";
+        System.out.println(sql);
+        PreparedStatement stmt = connection.prepareStatement(sql);
 
+//        stmt.setInt(1, id);
+        stmt.executeUpdate();
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
+//        return createVGamesFromResults(rs);
+        return false;
     }
     
     public List<VGames> searchVGames(String title) throws SQLException {
