@@ -36,7 +36,7 @@ public class VGamesServlet extends HttpServlet {
                 request.getParameter("description")
         );
         DaoFactory.getVgsDao().insert(vg);
-        response.sendRedirect("/profile");
+        response.sendRedirect("/vgames");
     }
 }
 

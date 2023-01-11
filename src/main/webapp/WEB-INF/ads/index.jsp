@@ -45,7 +45,7 @@
                         <li class="list-group-item">Price: ${game.price}</li>
                     </ul>
                     
-                    Buttons at bottom | Edit & Delete --%>
+                   <%-- Buttons at bottom | Edit & Delete --%>
                     <form method="POST" action="ads/delete">
                         <input style="display:none" id="gameID" name="gameID" class="form-control mr-1" type="text" value="${game.id}">
                         <input type="submit" value="DELETE">
