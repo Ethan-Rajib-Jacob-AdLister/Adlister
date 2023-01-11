@@ -14,21 +14,20 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
+<div class="container">
+    <h1>Here Are all the ads!</h1>
 
-<%--<%--%>
-<%--int id = Integer.parseInt(request.getParameter("id"));--%>
-<%--    VGames singleGame = new VGames(MySQLVGamesDao.con);--%>
-<%--    Vgames singleGame2 = singleGame.getSingleGame(id);--%>
-<%--    request.setAttribute("edit game", o);--%>
+    <div>
+        <form method="POST" action="/search">
+            <div class="form-group d-flex">
+                <input id="title" name="query" class="form-control mr-1" type="text">&nbsp;
+                <input type="submit" class="btn btn-primary" value="Search">
+            </div>
 
+        </form>
+    </div>
 
-<%--%>--%>
-
-
-
-
-
-<c:forEach var="game" items="${vgames}">
+   <c:forEach var="game" items="${vgames}">
 <div class="four-column-summary">
     <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
@@ -45,7 +44,6 @@
                 </ul>
                 <p><a href="#" class="btn btn-primary" role="button">Edit</a> <a href="#" class="btn btn-default" role="button">Delete</a></p>
             </div>
-        </div>
     </div>
 </div>
 </c:forEach>
