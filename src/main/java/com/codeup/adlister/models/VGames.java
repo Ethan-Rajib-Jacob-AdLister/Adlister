@@ -5,13 +5,13 @@ import static java.lang.Integer.parseInt;
 public class VGames {
     private long id;
     private long userId;
-    private String title;
-    private String description;
-    private String console;
-    private String genre;
-    private String type;
-    private String condition;
-    private String price;
+    private static String title;
+    private static String description;
+    private static String console;
+    private static String genre;
+    private static String type;
+    private static String condition;
+    private static String price;
 
 
 

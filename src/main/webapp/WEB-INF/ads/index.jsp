@@ -51,7 +51,7 @@
                         <input type="submit" value="DELETE">
                     </form>
                     
-                    <form method="POST" action="ads/">
+                    <form method="POST" action="ads/edit">
                         <input style="display:none" id="gameID2" name="gameID2" class="form-control mr-1" type="text" value="${game.id}">
                         <input type="submit" value="EDIT">
                     </form>

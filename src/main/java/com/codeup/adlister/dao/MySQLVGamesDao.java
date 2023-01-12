@@ -112,4 +112,28 @@ public class MySQLVGamesDao implements Vgs {
 
             return createVGamesFromResults(rs);
         }
+    public VGames findById(long id) throws SQLException {
+        String userQ = "Select * from game_store where id = ? limit 1";
+        PreparedStatement stmt = connection.prepareStatement(userQ);
+        stmt.setString(1, String.valueOf(id));
+        ResultSet rs = stmt.executeQuery();
+        if(rs.next()){
+            return extractVGames(rs);
+        }
+        return null;
+    }
+
+    public void update(VGames vGames) throws SQLException {
+        String q = "Update game_store set title = ?, console = ?, genre = ?, type = ?, cond = ?. price = ?, description = ? where id = ?";
+        PreparedStatement stmt = connection.prepareStatement(q);
+        stmt.setString(1, vGames.getTitle());
+        stmt.setString(2, vGames.getConsole());
+        stmt.setString(3, vGames.getGenre());
+        stmt.setString(4, vGames.getType());
+        stmt.setString(5, vGames.getCondition());
+        stmt.setString(6, vGames.getPrice());
+        stmt.setString(7, vGames.getDescription());
+        stmt.executeUpdate();
+
+    }
     }
