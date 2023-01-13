@@ -92,7 +92,7 @@ public class MySQLVGamesDao implements Vgs {
         System.out.printf("MYSQL IN: %s \n",stmt);
 
         ResultSet rs = stmt.executeQuery();
-        System.out.println("MYSQL OUT: "+rs);
+//        System.out.println("MYSQL OUT: "+rs);
 
         return createVGamesFromResults(rs);
     }
@@ -116,7 +116,7 @@ public class MySQLVGamesDao implements Vgs {
         stmt.setString(6, vg.getPrice());
         stmt.setString(7, vg.getDescription());
         stmt.setLong(8, vg.getId());
-        System.out.println(stmt);
+//        (stmt);
         stmt.executeUpdate();
     }
 

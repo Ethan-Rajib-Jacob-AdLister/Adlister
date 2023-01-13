@@ -28,7 +28,7 @@ public class editServlet2 extends HttpServlet {
                 request.getParameter("desc")
         );
 
-        System.out.println(vg);
+//        System.out.println(vg);
 
         try {
             DaoFactory.getVgsDao().update(vg);

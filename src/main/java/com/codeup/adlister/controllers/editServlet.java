@@ -15,17 +15,18 @@ public class editServlet extends HttpServlet {
     private int gameID = 0;
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("Start Get redirect");
+//        System.out.println("Start Get redirect");
         try {
 //            req.setAttribute("editGame",DaoFactory.getVgsDao().getAGame(Integer.parseInt(req.getParameter("editGameID"))));
-            System.out.println(gameID);
+//            System.out.println(gameID);
             VGames v1 = DaoFactory.getVgsDao().getAGame(gameID).get(0);
+            System.out.println(v1.getDescription());
             req.setAttribute("editGame",v1);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Before Get redirect");
+//        System.out.println("Before Get redirect");
         req.getRequestDispatcher("/WEB-INF/ads/editVGames.jsp").forward(req, resp);
     }
 
@@ -33,7 +34,7 @@ public class editServlet extends HttpServlet {
         //req.setAttribute("editGame", req.getParameter("gameID2"));
         gameID = Integer.parseInt(req.getParameter("gameID2"));
 
-        System.out.println("Before post redirect");
+//        System.out.println("Before post redirect");
         resp.sendRedirect("/ads/editSetup");
     }
 }
