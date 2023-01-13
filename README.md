@@ -25,8 +25,8 @@ However, a person without an account will be able to view the items (only view) 
 
 5. Include Credits:
 
-Jacob Jones
-Rajib Chaudhary
+Jacob Jones,
+Rajib Chaudhary,
 Ethan Gonzalez
 
 
