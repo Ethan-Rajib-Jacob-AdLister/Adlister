@@ -40,7 +40,7 @@
                     <%-- Buttons at bottom | Edit & Delete --%>
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">
                     <div class="btn-group">
-                            <form method="POST" action="ads/">
+                            <form method="POST" action="ads/editSetup">
                                 <input style="display:none" id="gameID2" name="gameID2" class="form-control mr-1" type="text" value="${game.id}">
                                 <input class="btn btn-sm btn-info" type="submit" value="EDIT"> </form>
                     </div>

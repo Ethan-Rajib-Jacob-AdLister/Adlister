@@ -82,6 +82,21 @@ public class MySQLVGamesDao implements Vgs {
         );
     }
 
+    public List<VGames> getAGame(int id) throws SQLException {
+        System.out.printf("Got %d for ID looking for game \n",id);
+        String sql = "SELECT * FROM games4sale_db.game_store WHERE ID = ? LIMIT 1";
+
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setInt(1, id);
+
+        System.out.printf("MYSQL IN: %s \n",stmt);
+
+        ResultSet rs = stmt.executeQuery();
+        System.out.println("MYSQL OUT: "+rs);
+
+        return createVGamesFromResults(rs);
+    }
+
     private List<VGames> createVGamesFromResults(ResultSet rs) throws SQLException {
         List<VGames> vgames = new ArrayList<>();
         while (rs.next()) {
@@ -90,11 +105,25 @@ public class MySQLVGamesDao implements Vgs {
         return vgames;
     }
 
+    public void update(VGames vg) throws SQLException {
+        String sql = "UPDATE games4sale_db.game_store SET title=?, console=?, genre=?,type=?,cond=?,price=?,description=? WHERE ID=?";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setString(1, vg.getTitle());
+        stmt.setString(2, vg.getConsole());
+        stmt.setString(3, vg.getGenre());
+        stmt.setString(4, vg.getType());
+        stmt.setString(5, vg.getCondition());
+        stmt.setString(6, vg.getPrice());
+        stmt.setString(7, vg.getDescription());
+        stmt.setLong(8, vg.getId());
+        System.out.println(stmt);
+        stmt.executeUpdate();
+    }
+
 // delete
 
     public boolean deleteVGames(int id2) throws SQLException {
         String sql = "DELETE FROM game_store WHERE id = " + id2 + ";";
-        System.out.println(sql);
         PreparedStatement stmt = connection.prepareStatement(sql);
 
 //        stmt.setInt(1, id);
