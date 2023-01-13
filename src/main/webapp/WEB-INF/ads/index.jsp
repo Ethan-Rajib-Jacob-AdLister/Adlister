@@ -32,10 +32,10 @@
                 <ul class="list-group">
                     <li class="list-group-item">Console: ${game.console}</li>
                     <li class="list-group-item">Genre: ${game.genre}</li>
-                    <li class="list-group-item">Desc: ${game.description}</li>
-                    <li class="list-group-item">Condition: ${game.condition}</li>
                     <li class="list-group-item">Type: ${game.type}</li>
+                    <li class="list-group-item">Condition: ${game.condition}</li>
                     <li class="list-group-item">Price: ${game.price}</li>
+                    <li class="list-group-item">Desc: ${game.description}</li>
                 </ul>
                     <%-- Buttons at bottom | Edit & Delete --%>
                 <div class="btn-group btn-group-justified" role="group" aria-label="...">

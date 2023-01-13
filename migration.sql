@@ -73,7 +73,7 @@ CREATE TABLE game_store (
                        type VARCHAR(50) NOT NULL DEFAULT 'NoType',
                        cond VARCHAR(50) DEFAULT 'NoCond',
                        price VARCHAR(15) NOT NULL DEFAULT 'NoPrice',
-                       description TEXT NOT NULL,
+                       description VARCHAR(100) NOT NULL,
                        PRIMARY KEY (id)
 #                        FOREIGN KEY (user_id) REFERENCES users(id)
 #                            ON DELETE CASCADE
