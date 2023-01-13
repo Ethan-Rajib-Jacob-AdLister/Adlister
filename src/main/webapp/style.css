@@ -2,3 +2,9 @@
 .centered {
     text-align: center;
 }
+
+.borderRed {
+    display: flex;
+    border: 5px red solid;
+    justify-content: space-between;
+}
