@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.VGamesServlet", urlPatterns = "/ads/vgames")
-public class VGamesServlet extends HttpServlet {
+@WebServlet(name = "controllers.VGamesServlet", urlPatterns = "/createGames")
+public class createServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/ads/vgames.jsp")
+        request.getRequestDispatcher("/WEB-INF/ads/createVGames.jsp")
                 .forward(request, response);
     }
 

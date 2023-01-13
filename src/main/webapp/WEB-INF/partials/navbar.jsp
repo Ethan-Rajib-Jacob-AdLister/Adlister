@@ -5,7 +5,7 @@
             <li><a href="/vgames">View listings</a></li>
             <c:choose>
                 <c:when test="${sessionScope.userLoggedIn}">
-                    <li><a href="/ads/vgames">Sell a Game!</a></li>
+                    <li><a href="/createGames">Sell a Game!</a></li>
                 </c:when>
             </c:choose>
         </ul>

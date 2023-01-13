@@ -9,7 +9,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
     <h1>Create a new game</h1>
-    <form action="/ads/vgames" method="post">
+    <form action="/createGames" method="post">
         <table>
             <th></th>
             <tr><label for="title">Title</label>

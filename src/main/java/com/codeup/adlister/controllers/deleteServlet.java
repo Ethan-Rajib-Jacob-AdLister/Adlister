@@ -12,7 +12,7 @@ import java.io.IOException;
     Handles deleting of Video Game listings based on MYSQL id assigned to VideoGames
  */
 @WebServlet(name = "DeleteVGamesServlet", urlPatterns = "/ads/delete")
-public class DeleteVGamesServlet extends HttpServlet {
+public class deleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int deleteGame = Integer.parseInt(request.getParameter("gameID"));
