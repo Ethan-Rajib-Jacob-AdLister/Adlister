@@ -31,7 +31,7 @@
                 <input id="price" name="price" class="form-control" type="text" placeholder="$0.00" value=${editGame.price}></tr>
             <th></th>
             <tr><label for="desc">Description</label>
-                <textarea id="desc" name="desc" class="form-control" type="text" value=${editGame.description}></textarea></tr>
+                <textarea id="desc" name="desc" class="form-control" type="text" >${editGame.description}</textarea></tr>
             <tr><input style="display:none" type="text" name="gameID" id="gameID" value=${editGame.id}></tr>
             <th></th>
         </table>
